@@ -37,7 +37,6 @@ height = 68.0
 
 [node name="player" type="Area2D"]
 script = ExtResource("1_1wi7l")
-speed = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -47,3 +46,5 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_lakvn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
